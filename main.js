@@ -31,14 +31,20 @@ $(window).on('scroll', function() {
         end: "+=100%"
     });
     gsap.to(".hiddenImage video", {
-        duration: 1.5,
         scale: 1,
     });
 
         
         $("#cent").addClass("relative");
         $("#hi").addClass("fadeIn");
-        $("#overflow").addClass("scroll");
+         $("#overflow").addClass("noscroll");
+       
+       
+         setTimeout(function() {  
+             $("#overflow").addClass("scroll") }
+             , 2000);
+
+
         $("#videoid").addClass("bigger");
         $("#logoleft").addClass("fixed");
         $("#logoright").addClass("fixed");
@@ -51,16 +57,29 @@ $(window).on('scroll', function() {
  gsap.to(".hiddenImage", {
     scrollTrigger: {
         trigger: ".hiddenImage",
-        start: "70%+=5px 400px ",
-        end: "bottom 200px",
-        toggleActions: "restart pause reverse reset",
+        start: "top 190px ",
+        end: "top 190px",
+        // toggleActions: "restart pause reverse reset",
+        toggleActions: "play none none reset",
+        scrub: true,
     },
-    duration: 0.3,
-    scale: 0.2,
-    opacity: 0,
+    duration: .1,
+    scale: 0.3,
     filter:"blur(4px)"
 });
 
+
+// fix video
+$(window).scroll(function() {    
+    var scrollBottom = $(window).scrollTop();
+    if (scrollBottom >= $(
+        '.end-of-video').offset().top + $('.end-of-video').
+          outerHeight() - window.innerHeight + 200) {
+        $(".hiddenImage").addClass("ciao");
+    } else {
+        $(".hiddenImage").removeClass("ciao");
+    }
+});
 
 // test on scroll
 
