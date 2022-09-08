@@ -42,7 +42,7 @@ $(window).on('scroll', function() {
        
          setTimeout(function() {  
              $("#overflow").addClass("scroll") }
-             , 2000);
+             , 1000);
 
 
         $("#videoid").addClass("bigger");
@@ -62,7 +62,6 @@ $(window).on('scroll', function() {
         // toggleActions: "restart pause reverse reset",
         toggleActions: "play revert pause reset",
         scrub: true,
-        markers:true
     },
     duration: .1,
     scale: 0.3,
