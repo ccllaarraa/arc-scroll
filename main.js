@@ -57,11 +57,12 @@ $(window).on('scroll', function() {
  gsap.to(".hiddenImage", {
     scrollTrigger: {
         trigger: ".hiddenImage",
-        start: "top 190px ",
-        end: "top 190px",
+        start: "bottom 190px ",
+        end: "bottom 190px",
         // toggleActions: "restart pause reverse reset",
-        toggleActions: "play none none reset",
+        toggleActions: "play revert pause reset",
         scrub: true,
+        markers:true
     },
     duration: .1,
     scale: 0.3,

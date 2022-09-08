@@ -212,13 +212,14 @@ transition: all 1s ease;
 }
 
 .footer {
-    height: calc(50vh - 56px);
+    height: calc(50vh - 101px);
     background: #c6c6c6;
     box-shadow: 2px -2px 9px 6px #c6c6c6;
     display: flex;
     justify-content: space-between;
     position: absolute;
     width: 100vw;
+    padding-top: 45px;
     .col1 {
         padding: 15px;
         display: flex;
