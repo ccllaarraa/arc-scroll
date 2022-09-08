@@ -7,7 +7,10 @@ $(window).on('scroll', function() {
 
 });
 
- 
+
+
+
+
 // on click
  function startAnim()  {
     gsap.to('.logo--left', {
